@@ -10,7 +10,7 @@ object Fibonacci {
     // write explicitly because it's a private method
     private def formatFib(n: Int) = {
         val str = "(recursive): the %d(th) position fib is: %d"
-        println(str.format(n, fib(n)))
+        str.format(n, fib(n))
     }
 
     def fibIter(x: Int, y: Int, position: Int, loopCounter: Int): Int = {
@@ -25,14 +25,14 @@ object Fibonacci {
     
     private  def formatFibIter(n: Int) = {
         val str = "(iterative): the %d(th) position fib is: %d"
-        println(str.format(n, findFibIter(n)))
+        str.format(n, findFibIter(n))
     }
 
     //fib sequenc: 0 1 1 2 3 5
     // it's good practice to explicitly write return value
     // of public methods hence the Unit [Unit is equivalent of void in C like lang]
     def main(args: Array[String]): Unit = {        
-        formatFib(8)
-        formatFibIter(8)
+        println(formatFib(8))
+        println(formatFibIter(8))
     }
 }
