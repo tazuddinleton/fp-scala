@@ -31,5 +31,8 @@ def buyCoffee (cc: CreditCard): (Coffee, Charge) = {
 }
 ```
 Instead of charging the credit card right away the second method returns a `Charge` object that defers the operation. That is better because now it enables to combine multiple charges per credit card.
-```
+
+### Referential Transparency
+The idea that every occurance of an expression *e* in a given program *p* can be replaced by the computed value of *e* without changing/affecting overall meaning of the prpgram *p*.
+
 
